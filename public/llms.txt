@@ -1,0 +1,15 @@
+# KEM Engineering & Design
+
+> Civil and structural engineering, architectural design and construction supervision based in Kasoa, Ghana.
+
+KEM Engineering & Design is a licensed civil engineering studio delivering AutoCAD drafting, structural drawings, architectural planning, project management and on-site supervision across Ghana.
+
+## Pages
+
+- [Home](/): Overview of services, recent projects and consultation booking.
+- [About](/about): Studio background, leadership and approach.
+- [Services](/services): Full list of engineering and design services with deliverables.
+- [Projects](/projects): Selected residential, commercial and structural project portfolio.
+- [Blog](/blog): Articles on engineering, construction and design in Ghana.
+- [Careers](/careers): How to apply and what we look for.
+- [Contact](/contact): Phone, email and consultation form.
