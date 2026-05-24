@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://apex-design-co.lovable.app/sitemap.xml
+Sitemap: https://kemengineerings.netlify.app/sitemap.xml
