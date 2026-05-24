@@ -33,7 +33,7 @@ export function Counter({ to, duration = 1500 }: { to: number; duration?: number
           if (e.isIntersecting) start();
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     obs.observe(el);
 

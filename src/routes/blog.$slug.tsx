@@ -24,17 +24,19 @@ export const Route = createFileRoute("/blog/$slug")({
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: p
-        ? [{
-            type: "application/ld+json",
-            children: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Article",
-              headline: p.title,
-              datePublished: p.date,
-              author: { "@type": "Organization", name: "KEM Engineering & Design" },
-              publisher: { "@type": "Organization", name: "KEM Engineering & Design" },
-            }),
-          }]
+        ? [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Article",
+                headline: p.title,
+                datePublished: p.date,
+                author: { "@type": "Organization", name: "KEM Engineering & Design" },
+                publisher: { "@type": "Organization", name: "KEM Engineering & Design" },
+              }),
+            },
+          ]
         : [],
     };
   },
@@ -47,14 +49,23 @@ function PostPage() {
   return (
     <SiteShell>
       <article className="container-x py-12 max-w-3xl">
-        <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary">← All articles</Link>
+        <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary">
+          ← All articles
+        </Link>
         <div className="mt-4 text-[11px] uppercase tracking-[0.2em] text-primary">
-          {new Date(post.date).toLocaleDateString("en-GB", { year: "numeric", month: "short", day: "numeric" })} · {post.readMins} min read
+          {new Date(post.date).toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })}{" "}
+          · {post.readMins} min read
         </div>
         <h1 className="mt-3 text-4xl md:text-5xl font-bold leading-tight">{post.title}</h1>
         <p className="mt-5 text-lg text-muted-foreground">{post.excerpt}</p>
         <div className="mt-8 space-y-5 text-foreground/90 leading-relaxed">
-          {post.body.map((para: string, i: number) => <p key={i}>{para}</p>)}
+          {post.body.map((para: string, i: number) => (
+            <p key={i}>{para}</p>
+          ))}
         </div>
       </article>
 
@@ -63,7 +74,12 @@ function PostPage() {
           <h2 className="text-xl font-semibold">Keep reading</h2>
           <div className="mt-5 grid sm:grid-cols-2 gap-5">
             {others.map((p) => (
-              <Link key={p.slug} to="/blog/$slug" params={{ slug: p.slug }} className="rounded-xl p-5 border border-border hover:border-primary/40 transition">
+              <Link
+                key={p.slug}
+                to="/blog/$slug"
+                params={{ slug: p.slug }}
+                className="rounded-xl p-5 border border-border hover:border-primary/40 transition"
+              >
                 <div className="font-semibold">{p.title}</div>
                 <div className="mt-1 text-xs text-muted-foreground">{p.readMins} min read</div>
               </Link>

@@ -56,8 +56,7 @@ export const posts: Post[] = [
   {
     slug: "hiring-engineering-firm-ghana",
     title: "What to Look for When Hiring an Engineering Firm in Ghana",
-    excerpt:
-      "Five questions to ask any engineering firm before you sign the contract.",
+    excerpt: "Five questions to ask any engineering firm before you sign the contract.",
     date: "2025-01-10",
     readMins: 4,
     body: [

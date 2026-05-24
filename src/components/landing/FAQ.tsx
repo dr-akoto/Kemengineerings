@@ -3,7 +3,6 @@ import { Plus } from "lucide-react";
 import { SectionTitle } from "./SectionTitle";
 import { faqs } from "@/data/faqs";
 
-
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
   return (
@@ -12,10 +11,17 @@ export function FAQ() {
         <div className="lg:col-span-5">
           <SectionTitle
             eyebrow="FAQ"
-            title={<>Answers to <span className="text-gradient-gold">common questions</span></>}
+            title={
+              <>
+                Answers to <span className="text-gradient-gold">common questions</span>
+              </>
+            }
             subtitle="Still curious? Our team is one click away."
           />
-          <a href="#contact" className="mt-6 inline-flex items-center rounded-md bg-[var(--gradient-gold)] px-5 py-3 text-sm font-semibold text-primary-foreground hover:shadow-[var(--shadow-gold)] transition">
+          <a
+            href="#contact"
+            className="mt-6 inline-flex items-center rounded-md bg-[var(--gradient-gold)] px-5 py-3 text-sm font-semibold text-primary-foreground hover:shadow-[var(--shadow-gold)] transition"
+          >
             Talk to an Engineer
           </a>
         </div>
@@ -29,9 +35,13 @@ export function FAQ() {
                   className="w-full flex items-center justify-between text-left gap-4"
                 >
                   <span className="font-medium text-base md:text-lg">{f.q}</span>
-                  <Plus className={`size-5 shrink-0 text-primary transition-transform ${isOpen ? "rotate-45" : ""}`} />
+                  <Plus
+                    className={`size-5 shrink-0 text-primary transition-transform ${isOpen ? "rotate-45" : ""}`}
+                  />
                 </button>
-                <div className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"}`}>
+                <div
+                  className={`grid transition-all duration-300 ${isOpen ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"}`}
+                >
                   <div className="overflow-hidden">
                     <p className="text-sm text-muted-foreground leading-relaxed pr-8">{f.a}</p>
                   </div>

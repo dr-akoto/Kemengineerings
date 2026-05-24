@@ -40,8 +40,7 @@ export function ContactForm({ variant = "hero" }: { variant?: "hero" | "page" })
 
     const d = r.data;
     const subject = `Consultation Request — ${d.service}`;
-    const body =
-      `Name: ${d.name}\nPhone: ${d.phone}\nEmail: ${d.email}\nService: ${d.service}\n\n${d.message}`;
+    const body = `Name: ${d.name}\nPhone: ${d.phone}\nEmail: ${d.email}\nService: ${d.service}\n\n${d.message}`;
 
     // Open email client (to company email)
     const mailto = `mailto:kemclassic7@icloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -56,12 +55,15 @@ export function ContactForm({ variant = "hero" }: { variant?: "hero" | "page" })
 
   if (sent) {
     return (
-      <div className={`glass rounded-2xl p-8 ${variant === "hero" ? "shadow-[var(--shadow-elegant)]" : ""}`}>
+      <div
+        className={`glass rounded-2xl p-8 ${variant === "hero" ? "shadow-[var(--shadow-elegant)]" : ""}`}
+      >
         <div className="flex flex-col items-center text-center py-8">
           <CheckCircle2 className="size-14 text-primary" />
           <h3 className="mt-4 text-xl font-semibold">Request received</h3>
           <p className="mt-2 text-sm text-muted-foreground max-w-sm">
-            Thanks — a senior engineer will reach out within one business day to schedule your consultation.
+            Thanks — a senior engineer will reach out within one business day to schedule your
+            consultation.
           </p>
         </div>
       </div>
@@ -93,21 +95,37 @@ export function ContactForm({ variant = "hero" }: { variant?: "hero" | "page" })
             {errors.phone && <p className="mt-1 text-xs text-destructive">{errors.phone}</p>}
           </div>
           <div>
-            <input name="email" type="email" placeholder="Email" className={inputCls} maxLength={255} />
+            <input
+              name="email"
+              type="email"
+              placeholder="Email"
+              className={inputCls}
+              maxLength={255}
+            />
             {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
           </div>
         </div>
         <div>
           <select name="service" defaultValue="" className={inputCls}>
-            <option value="" disabled>Service Needed</option>
+            <option value="" disabled>
+              Service Needed
+            </option>
             {services.map((s) => (
-              <option key={s} value={s}>{s}</option>
+              <option key={s} value={s}>
+                {s}
+              </option>
             ))}
           </select>
           {errors.service && <p className="mt-1 text-xs text-destructive">{errors.service}</p>}
         </div>
         <div>
-          <textarea name="message" placeholder="Project details" rows={4} maxLength={1000} className={inputCls} />
+          <textarea
+            name="message"
+            placeholder="Project details"
+            rows={4}
+            maxLength={1000}
+            className={inputCls}
+          />
           {errors.message && <p className="mt-1 text-xs text-destructive">{errors.message}</p>}
         </div>
         <button

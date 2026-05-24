@@ -37,12 +37,23 @@ function ProjectDetail() {
   return (
     <SiteShell>
       <section className="container-x py-10">
-        <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary">← All projects</Link>
+        <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary">
+          ← All projects
+        </Link>
         <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-[1.05]">{project.name}</h1>
         <div className="mt-4 flex flex-wrap gap-5 text-sm text-muted-foreground">
-          <span className="flex items-center gap-2"><MapPin className="size-4 text-primary" />{project.location}</span>
-          <span className="flex items-center gap-2"><Tag className="size-4 text-primary" />{project.category}</span>
-          <span className="flex items-center gap-2"><Calendar className="size-4 text-primary" />{project.year}</span>
+          <span className="flex items-center gap-2">
+            <MapPin className="size-4 text-primary" />
+            {project.location}
+          </span>
+          <span className="flex items-center gap-2">
+            <Tag className="size-4 text-primary" />
+            {project.category}
+          </span>
+          <span className="flex items-center gap-2">
+            <Calendar className="size-4 text-primary" />
+            {project.year}
+          </span>
         </div>
       </section>
 
@@ -71,8 +82,13 @@ function ProjectDetail() {
         <aside>
           <div className="glass rounded-2xl p-6 sticky top-28">
             <h3 className="text-lg font-semibold">Have a similar project?</h3>
-            <p className="mt-2 text-sm text-muted-foreground">Get a tailored quote within 48 hours.</p>
-            <Link to="/contact" className="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-md bg-[var(--gradient-gold)] px-5 py-3 text-sm font-semibold text-white">
+            <p className="mt-2 text-sm text-muted-foreground">
+              Get a tailored quote within 48 hours.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-5 w-full inline-flex items-center justify-center gap-2 rounded-md bg-[var(--gradient-gold)] px-5 py-3 text-sm font-semibold text-white"
+            >
               Start a Project <ArrowRight className="size-4" />
             </Link>
           </div>
@@ -83,10 +99,22 @@ function ProjectDetail() {
         <h2 className="text-2xl font-semibold">More projects</h2>
         <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {others.map((p) => (
-            <Link key={p.slug} to="/projects/$slug" params={{ slug: p.slug }} className="group rounded-xl overflow-hidden border border-border">
-              <img src={p.image} alt={p.name} className="w-full h-48 object-cover transition-transform group-hover:scale-105" loading="lazy" />
+            <Link
+              key={p.slug}
+              to="/projects/$slug"
+              params={{ slug: p.slug }}
+              className="group rounded-xl overflow-hidden border border-border"
+            >
+              <img
+                src={p.image}
+                alt={p.name}
+                className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                loading="lazy"
+              />
               <div className="p-4">
-                <div className="text-[10px] uppercase tracking-[0.2em] text-primary">{p.category}</div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-primary">
+                  {p.category}
+                </div>
                 <div className="mt-1 font-semibold">{p.name}</div>
               </div>
             </Link>

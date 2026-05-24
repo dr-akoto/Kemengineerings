@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { projects as allProjects } from "@/data/projects";
 
 const cats = ["All", "Residential", "Commercial", "Structural Design", "CAD Projects"] as const;
-type Cat = typeof cats[number];
+type Cat = (typeof cats)[number];
 
 const projects = allProjects.map((p, i) => ({
   slug: p.slug,
@@ -26,7 +26,11 @@ export function Projects() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <SectionTitle
             eyebrow="Selected Work"
-            title={<>Engineered with <span className="text-gradient-gold">intent</span>.</>}
+            title={
+              <>
+                Engineered with <span className="text-gradient-gold">intent</span>.
+              </>
+            }
             subtitle="A glimpse into recent projects across residential, commercial and structural design."
           />
           <div className="flex flex-wrap gap-2">

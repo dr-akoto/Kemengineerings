@@ -18,9 +18,12 @@ export function TrustBar() {
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-display font-bold tracking-tight">
-                  <Counter to={it.value} />{it.suffix}
+                  <Counter to={it.value} />
+                  {it.suffix}
                 </div>
-                <div className="text-xs text-muted-foreground uppercase tracking-wider">{it.label}</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                  {it.label}
+                </div>
               </div>
             </div>
           ))}

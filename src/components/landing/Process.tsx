@@ -2,12 +2,36 @@ import { ClipboardList, Compass, FileSignature, HardHat, KeyRound, MapPinned } f
 import { SectionTitle } from "./SectionTitle";
 
 const steps = [
-  { icon: ClipboardList, title: "Consultation", desc: "We listen, scope your goals and align on outcomes." },
-  { icon: MapPinned, title: "Site Assessment", desc: "On-site survey, soil/structural audit and feasibility." },
-  { icon: Compass, title: "Design & Planning", desc: "Concept design, code review and stakeholder approvals." },
-  { icon: FileSignature, title: "Structural Drafting", desc: "Detailed CAD/BIM drawings ready for permit & build." },
-  { icon: HardHat, title: "Construction Support", desc: "On-site supervision, RFIs and quality assurance." },
-  { icon: KeyRound, title: "Project Delivery", desc: "Handover, as-builts and post-occupancy support." },
+  {
+    icon: ClipboardList,
+    title: "Consultation",
+    desc: "We listen, scope your goals and align on outcomes.",
+  },
+  {
+    icon: MapPinned,
+    title: "Site Assessment",
+    desc: "On-site survey, soil/structural audit and feasibility.",
+  },
+  {
+    icon: Compass,
+    title: "Design & Planning",
+    desc: "Concept design, code review and stakeholder approvals.",
+  },
+  {
+    icon: FileSignature,
+    title: "Structural Drafting",
+    desc: "Detailed CAD/BIM drawings ready for permit & build.",
+  },
+  {
+    icon: HardHat,
+    title: "Construction Support",
+    desc: "On-site supervision, RFIs and quality assurance.",
+  },
+  {
+    icon: KeyRound,
+    title: "Project Delivery",
+    desc: "Handover, as-builts and post-occupancy support.",
+  },
 ];
 
 export function Process() {
@@ -16,7 +40,11 @@ export function Process() {
       <div className="container-x">
         <SectionTitle
           eyebrow="Our Process"
-          title={<>A clear path from <span className="text-gradient-gold">brief to build</span>.</>}
+          title={
+            <>
+              A clear path from <span className="text-gradient-gold">brief to build</span>.
+            </>
+          }
           subtitle="Six structured stages that keep your project on time, on budget and engineered to last."
           align="center"
         />

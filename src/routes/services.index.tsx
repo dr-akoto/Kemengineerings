@@ -7,9 +7,16 @@ export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Engineering Services | KEM Engineering & Design" },
-      { name: "description", content: "Civil and structural engineering services in Ghana — AutoCAD drafting, structural drawings, architectural design and on-site supervision." },
+      {
+        name: "description",
+        content:
+          "Civil and structural engineering services in Ghana — AutoCAD drafting, structural drawings, architectural design and on-site supervision.",
+      },
       { property: "og:title", content: "Engineering Services | KEM Engineering & Design" },
-      { property: "og:description", content: "Civil and structural engineering services in Ghana." },
+      {
+        property: "og:description",
+        content: "Civil and structural engineering services in Ghana.",
+      },
       { property: "og:url", content: "https://apex-design-co.lovable.app/services" },
     ],
     links: [{ rel: "canonical", href: "https://apex-design-co.lovable.app/services" }],
@@ -22,7 +29,11 @@ function ServicesPage() {
     <SiteShell>
       <PageHeader
         eyebrow="What We Do"
-        title={<>Engineering services, <span className="text-gradient-gold">end to end</span></>}
+        title={
+          <>
+            Engineering services, <span className="text-gradient-gold">end to end</span>
+          </>
+        }
         subtitle="From the first sketch to the final inspection — pick a service to see deliverables, who it's for and what's included."
       />
       <section className="container-x pb-20">
@@ -37,7 +48,8 @@ function ServicesPage() {
               <h2 className="text-lg font-semibold">{s.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.short}</p>
               <div className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-primary">
-                Explore <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                Explore{" "}
+                <ArrowUpRight className="size-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
             </Link>
           ))}

@@ -26,7 +26,8 @@ export const projects: Project[] = [
     image: p1,
     scope: "Full architectural and structural design for a 5-bedroom contemporary villa.",
     challenge: "A sloping site required custom stepped foundations and careful drainage planning.",
-    outcome: "Delivered permit-ready drawings in 6 weeks; structure completed on time and on budget.",
+    outcome:
+      "Delivered permit-ready drawings in 6 weeks; structure completed on time and on budget.",
     year: "2024",
   },
   {
@@ -37,7 +38,8 @@ export const projects: Project[] = [
     image: p2,
     scope: "Structural design and construction supervision for a 9-storey mixed-use tower.",
     challenge: "Tight downtown plot with limited staging area for materials and cranes.",
-    outcome: "Phased construction plan reduced site congestion and shaved 4 months off the schedule.",
+    outcome:
+      "Phased construction plan reduced site congestion and shaved 4 months off the schedule.",
     year: "2024",
   },
   {

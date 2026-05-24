@@ -6,9 +6,16 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About KEM Engineering & Design | Kasoa, Ghana" },
-      { name: "description", content: "Premium civil and structural engineering studio in Iron-City, Kasoa, delivering high-value construction projects across Ghana." },
+      {
+        name: "description",
+        content:
+          "Premium civil and structural engineering studio in Iron-City, Kasoa, delivering high-value construction projects across Ghana.",
+      },
       { property: "og:title", content: "About KEM Engineering & Design" },
-      { property: "og:description", content: "Premium civil and structural engineering studio in Kasoa, Ghana." },
+      {
+        property: "og:description",
+        content: "Premium civil and structural engineering studio in Kasoa, Ghana.",
+      },
       { property: "og:url", content: "https://apex-design-co.lovable.app/about" },
     ],
     links: [{ rel: "canonical", href: "https://apex-design-co.lovable.app/about" }],
@@ -28,17 +35,36 @@ function AboutPage() {
     <SiteShell>
       <PageHeader
         eyebrow="About"
-        title={<>Engineering with <span className="text-gradient-gold">precision and care</span></>}
+        title={
+          <>
+            Engineering with <span className="text-gradient-gold">precision and care</span>
+          </>
+        }
         subtitle="KEM Engineering & Design is a civil and structural engineering studio based in Iron-City, Kasoa. We help homeowners, developers and architects build with confidence."
       />
 
       <section className="container-x grid md:grid-cols-3 gap-6 pb-16">
         {[
-          { icon: Target, title: "Mission", text: "Deliver engineering documentation and supervision that makes every project buildable, durable and code-compliant." },
-          { icon: Eye, title: "Vision", text: "Be the engineering partner of choice for landmark residential and commercial projects across West Africa." },
-          { icon: Award, title: "Values", text: "Precision, transparency, and a relentless commitment to the people who trust us with their projects." },
+          {
+            icon: Target,
+            title: "Mission",
+            text: "Deliver engineering documentation and supervision that makes every project buildable, durable and code-compliant.",
+          },
+          {
+            icon: Eye,
+            title: "Vision",
+            text: "Be the engineering partner of choice for landmark residential and commercial projects across West Africa.",
+          },
+          {
+            icon: Award,
+            title: "Values",
+            text: "Precision, transparency, and a relentless commitment to the people who trust us with their projects.",
+          },
         ].map((c) => (
-          <div key={c.title} className="rounded-xl p-6 border border-border bg-[var(--gradient-card)]">
+          <div
+            key={c.title}
+            className="rounded-xl p-6 border border-border bg-[var(--gradient-card)]"
+          >
             <div className="grid place-items-center size-11 rounded-lg bg-primary/10 text-primary border border-primary/20">
               <c.icon className="size-5" />
             </div>
@@ -52,14 +78,15 @@ function AboutPage() {
         <h2 className="text-3xl font-bold">Our story</h2>
         <div className="mt-5 max-w-3xl space-y-4 text-muted-foreground leading-relaxed">
           <p>
-            KEM Engineering & Design was founded with a simple conviction — that better engineering documentation
-            saves money on site. After years of watching well-intentioned projects suffer from incomplete drawings,
-            missing structural details and absent supervision, we set out to be the partner we wished existed.
+            KEM Engineering & Design was founded with a simple conviction — that better engineering
+            documentation saves money on site. After years of watching well-intentioned projects
+            suffer from incomplete drawings, missing structural details and absent supervision, we
+            set out to be the partner we wished existed.
           </p>
           <p>
-            Today we work with private homeowners, real-estate developers and fellow architects across Ghana —
-            providing AutoCAD drafting, structural engineering, architectural design, quantity surveying and
-            on-site supervision under one roof.
+            Today we work with private homeowners, real-estate developers and fellow architects
+            across Ghana — providing AutoCAD drafting, structural engineering, architectural design,
+            quantity surveying and on-site supervision under one roof.
           </p>
         </div>
       </section>

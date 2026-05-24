@@ -28,15 +28,24 @@ export function WhyUs() {
             className="relative rounded-2xl border border-border shadow-[var(--shadow-elegant)]"
           />
           <div className="absolute -bottom-6 -right-4 md:-right-8 glass rounded-2xl p-5 shadow-[var(--shadow-card)]">
-            <div className="text-3xl font-display font-bold text-gradient-gold"><Counter to={98} />%</div>
-            <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">On-time Delivery</div>
+            <div className="text-3xl font-display font-bold text-gradient-gold">
+              <Counter to={98} />%
+            </div>
+            <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">
+              On-time Delivery
+            </div>
           </div>
         </div>
 
         <div>
           <SectionTitle
             eyebrow="Why Choose Us"
-            title={<>Built on precision, <span className="text-gradient-gold">backed by experience</span>.</>}
+            title={
+              <>
+                Built on precision, <span className="text-gradient-gold">backed by experience</span>
+                .
+              </>
+            }
             subtitle="We combine decades of structural expertise with modern engineering technology to deliver designs that are buildable, durable and code-compliant."
           />
           <ul className="mt-8 grid sm:grid-cols-2 gap-3">
